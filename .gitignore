@@ -1,0 +1,29 @@
+﻿# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dart / Flutter
+.dart_tool/
+.packages
+.pub/
+build/
+
+# Flutter platform outputs
+**/ios/Pods/
+**/ios/.symlinks/
+**/android/.gradle/
+**/android/app/build/
+**/android/local.properties
+
+# Coverage
+coverage/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Misc
+*.log

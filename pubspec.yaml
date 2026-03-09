@@ -1,0 +1,36 @@
+name: today_lunch_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+workspace:
+  - apps/mobile
+  - packages/shared_models
+  - packages/shared_utils
+  - server/api
+
+dev_dependencies:
+  melos: ^7.4.0
+
+melos:
+  scripts:
+    format:
+      run: dart format .
+      description: Format the workspace.
+    analyze:
+      run: dart analyze
+      description: Analyze the workspace.
+    test:
+      run: dart test
+      description: Run all Dart tests in the workspace.
+    test:mobile:
+      run: flutter test
+      packageFilters:
+        scope: mobile
+      description: Run Flutter tests for the mobile app.
+    test:server:
+      run: dart test
+      packageFilters:
+        scope: api_server
+      description: Run server tests.
