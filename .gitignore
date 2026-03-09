@@ -16,6 +16,8 @@ build/
 **/android/.gradle/
 **/android/app/build/
 **/android/local.properties
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
 
 # Coverage
 coverage/
