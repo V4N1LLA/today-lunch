@@ -1,0 +1,11 @@
+﻿name: shared_utils
+description: Shared utility functions for today-lunch
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+resolution: workspace
+
+dev_dependencies:
+  test: ^1.25.0
