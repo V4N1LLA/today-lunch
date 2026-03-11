@@ -7,7 +7,8 @@
 3. Run `.\scripts\analyze.ps1`
 4. Run `.\scripts\test.ps1`
 5. Start the API with `dart run server/api/bin/server.dart`
-6. Start the app from `apps/mobile` with `flutter run`
+6. Verify the API with `Invoke-WebRequest http://localhost:8080/health`
+7. Start the app from `apps/mobile` with `flutter run`
 
 ## Notes
 

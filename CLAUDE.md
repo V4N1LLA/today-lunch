@@ -37,18 +37,20 @@ This file is the fastest way to get back into productive work on `today-lunch`.
 - Open PR: `#1 Bootstrap today-lunch monorepo scaffold`
 - Bootstrap scripts exist and are verified in the current Windows environment.
 - `melos bootstrap` is still unstable on this Windows setup, so `scripts/bootstrap.ps1` defaults to package-level `pub get`.
+- Server health route is now assembled through `server/api/lib/src/app.dart` and covered by a real route test.
 
 ## Next slices
 
-1. Replace the placeholder server health test with a real route/handler test.
-2. Refactor server health code out of `server/api/bin/server.dart` into `server/api/lib/src/features/health/`.
-3. Add a minimal mobile health-check service under `apps/mobile/lib/src/core/network/` and show status on the home screen.
-4. After health is stable, implement `GET /v1/places/nearby` and then `POST /v1/recommendations/pick`.
+1. Add a minimal mobile health-check service under `apps/mobile/lib/src/core/network/` and show status on the home screen.
+2. Implement `GET /v1/places/nearby` with a dummy provider and real validation.
+3. Implement `POST /v1/recommendations/pick` with exclusion handling.
+4. Once the server endpoints are stable, connect mobile recommendation flow end to end.
 
 ## File map for the next slice
 
+- Server app assembly: `server/api/lib/src/app.dart`
 - Server health implementation: `server/api/lib/src/features/health/`
-- Server routing glue: `server/api/bin/server.dart`
+- Server entrypoint: `server/api/bin/server.dart`
 - Mobile HTTP client: `apps/mobile/lib/src/core/network/`
 - Mobile first UI update: `apps/mobile/lib/main.dart`
 - Shared payloads when needed: `packages/shared_models/lib/src/`
