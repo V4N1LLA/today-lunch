@@ -55,3 +55,4 @@ infra
 - 아키텍처: `docs/architecture/today-lunch-blueprint.md`
 - API 계약: `docs/contracts/`
 - 운영 메모: `docs/runbook/`
+- 작업 가이드: `CLAUDE.md`
