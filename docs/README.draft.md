@@ -34,20 +34,22 @@ infra
 ```
 
 ## 실행 방법
-1. `dart pub global activate melos`
-2. `dart pub get`
-3. `dart run melos bootstrap`
+1. `.\scripts\bootstrap.ps1`
+2. `.\scripts\analyze.ps1`
+3. `.\scripts\test.ps1`
 4. 서버 실행: `dart run server/api/bin/server.dart`
 5. 앱 실행: `cd apps/mobile && flutter run`
+
+`.\scripts\bootstrap.ps1` 는 Windows 환경에서 `melos bootstrap` UTF-8 오류를 피하기 위해 기본적으로 패키지별 `pub get`를 수행한다.
 
 ## 환경 변수
 - 앱: `apps/mobile/.env.example`
 - 서버: `server/api/.env.example`
 
 ## 테스트 실행
-- 전체: `dart run melos run test`
-- 모바일: `dart run melos run test:mobile`
-- 서버: `dart run melos run test:server`
+- 전체: `.\scripts\test.ps1`
+- 모바일: `cd apps/mobile && flutter test`
+- 서버: `cd server/api && dart test`
 
 ## 주요 문서
 - 아키텍처: `docs/architecture/today-lunch-blueprint.md`
