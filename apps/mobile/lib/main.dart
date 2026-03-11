@@ -1,7 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'src/features/home/presentation/home_page.dart';
 
 void main() {
-  runApp(const TodayLunchApp());
+  runApp(const ProviderScope(child: TodayLunchApp()));
 }
 
 class TodayLunchApp extends StatelessWidget {
@@ -11,10 +14,11 @@ class TodayLunchApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'today-lunch',
-      home: Scaffold(
-        appBar: AppBar(title: const Text('today-lunch')),
-        body: const Center(child: Text('MVP bootstrap')),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        useMaterial3: true,
       ),
+      home: const HomePage(),
     );
   }
 }

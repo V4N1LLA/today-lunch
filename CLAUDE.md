@@ -38,19 +38,21 @@ This file is the fastest way to get back into productive work on `today-lunch`.
 - Bootstrap scripts exist and are verified in the current Windows environment.
 - `melos bootstrap` is still unstable on this Windows setup, so `scripts/bootstrap.ps1` defaults to package-level `pub get`.
 - Server health route is now assembled through `server/api/lib/src/app.dart` and covered by a real route test.
+- Mobile home screen now calls `GET /health` through a minimal Riverpod + Dio slice and shows the result.
 
 ## Next slices
 
-1. Add a minimal mobile health-check service under `apps/mobile/lib/src/core/network/` and show status on the home screen.
-2. Implement `GET /v1/places/nearby` with a dummy provider and real validation.
-3. Implement `POST /v1/recommendations/pick` with exclusion handling.
-4. Once the server endpoints are stable, connect mobile recommendation flow end to end.
+1. Implement `GET /v1/places/nearby` with a dummy provider and real validation.
+2. Implement `POST /v1/recommendations/pick` with exclusion handling.
+3. Connect the mobile recommendation flow end to end on the home screen.
+4. Add location mode and filter persistence after the basic recommendation path works.
 
 ## File map for the next slice
 
 - Server app assembly: `server/api/lib/src/app.dart`
 - Server health implementation: `server/api/lib/src/features/health/`
 - Server entrypoint: `server/api/bin/server.dart`
+- Mobile home slice: `apps/mobile/lib/src/features/home/`
 - Mobile HTTP client: `apps/mobile/lib/src/core/network/`
 - Mobile first UI update: `apps/mobile/lib/main.dart`
 - Shared payloads when needed: `packages/shared_models/lib/src/`

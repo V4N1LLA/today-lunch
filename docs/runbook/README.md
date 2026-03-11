@@ -9,6 +9,7 @@
 5. Start the API with `dart run server/api/bin/server.dart`
 6. Verify the API with `Invoke-WebRequest http://localhost:8080/health`
 7. Start the app from `apps/mobile` with `flutter run`
+8. Confirm the home screen shows `Server OK` and the API version
 
 ## Notes
 
